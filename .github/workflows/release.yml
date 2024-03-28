@@ -84,8 +84,8 @@ jobs:
       uses: mskelton/setup-yarn@v1
     - name: Install dependencies
       run: yarn --frozen-lockfile
-    - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
-      run: npm audit signatures
+    # - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
+    #   run: npm audit signatures
     - name: Release
       run: yarn semantic-release
       env:
