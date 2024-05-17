@@ -2,7 +2,7 @@ import React from 'react'
 import { Form } from 'formik'
 import ArrayField from './array'
 import SingleField from './single'
-import * as ReactDOM from 'react-dom'
+// import * as ReactDOM from 'react-dom'
 
 
 export default (props) => {
