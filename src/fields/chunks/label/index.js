@@ -1,5 +1,5 @@
 import React from 'react'
-import PlatformText from '../../../platform/text'
+import PlatformText from '../../../platform/text/index.native.js'
 import PlatformContainer from '../../../platform/container/index.native.js'
 
 export default (props) => {
