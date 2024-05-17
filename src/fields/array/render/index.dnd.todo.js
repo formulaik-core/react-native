@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Field, FastField, ErrorMessage as BaseErrorMesssage, } from 'formik'
 import componentResolver from '../../componentResolver'
 import Add from './chunks/add'
-import * as ReactDOM from 'react-dom'
+// import * as ReactDOM from 'react-dom'
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd"
 
 import React from 'react'
