@@ -6,6 +6,7 @@ import Add from './chunks/add'
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd"
 
 import React from 'react'
+import PlatformContainer from '../../../platform/container/index.native.js'
 
 export default (props) => {
   const {
@@ -94,13 +95,13 @@ export default (props) => {
     // });
   }
 
-  return <div data-id='array-container'>
-    <div data-id='array-container-content'
+  return <PlatformContainer data-id='array-container'>
+    <PlatformContainer data-id='array-container-content'
       className={`w-full p-2 bg-red-400 overflow-x-scroll ${props.item.isHorizontal ? 'flex gap-2 pb-8' : ''}`}>
       <DragDropContext onDragEnd={onDragEnd}>
         <Droppable droppableId="droppable">
           {(provided, snapshot) => (
-            <div
+            <PlatformContainer
               {...provided.droppableProps}
               ref={provided.innerRef}
               // style={getListStyle(snapshot.isDraggingOver)}
@@ -136,7 +137,7 @@ export default (props) => {
                 })
 
                 if (!ContainerComponent) {
-                  ContainerComponent = ({ children }) => <div>{children}</div>
+                  ContainerComponent = ({ children }) => <PlatformContainer>{children}</PlatformContainer>
                 }
 
                 const onRemoveRequired = () => {
@@ -180,7 +181,7 @@ export default (props) => {
                   onValueChanged(_i, params)
                 }
 
-                return <div
+                return <PlatformContainer
                   key={index}
                   className={`form-control ${!props.item.isHorizontal ? '' : ''}  ${className}`}>
                   <Renderer
@@ -221,7 +222,8 @@ export default (props) => {
                           draggableId={itemId}
                           className={`w-full`}
                           index={index}>
-                          {(provided, snapshot) => (<div
+                          {(provided, snapshot) => (<PlatformContainer
+
                             data-id='array-container-content-entry'
                             key={index}
                             className={`form-control w-full ${!props.item.isHorizontal ? '' : ''}  ${className}`}
@@ -232,7 +234,7 @@ export default (props) => {
                               snapshot.isDragging,
                               provided.draggableProps.style
                             )}
-                          >{children}</div>)}
+                          >{children}</PlatformContainer>)}
                         </Draggable>
 
                       if (portalContainersRef &&
@@ -317,20 +319,20 @@ export default (props) => {
                       component="div"
                       className="text-sm text-red-600 pt-2" />
                     : null}
-                </div>
+                </PlatformContainer>
               })}
-            </div>
+            </PlatformContainer>
           )}
         </Droppable>
       </DragDropContext>
-    </div>
+    </PlatformContainer>
     {(!props.disabled && props.item.canAddItems && !items.length < props.item.maxItems) &&
       <AddComponent
         onClick={onAdd}
         title={add.title}
         disabled={items.length >= props.item.maxItems} />
     }
-  </div>
+  </PlatformContainer>
 }
 
 const grid = 2

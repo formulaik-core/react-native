@@ -1,14 +1,14 @@
 import React from 'react'
-import { Form } from 'formik'
 import ArrayField from './array'
 import SingleField from './single'
 // import * as ReactDOM from 'react-dom'
-
+import PlatformContainer from '../platform/container/index.native.js'
+import PlatformForm from '../platform/form/index.native.js'
 
 export default (props) => {
   const { inputs } = props
   const items = Array.isArray(inputs) ? inputs : inputs()
-  return <Form>
+  return <PlatformForm>
     {
       items.map(item => {
         const { isMulti } = item
@@ -19,14 +19,14 @@ export default (props) => {
         return renderItem({ ...props, item, })
       })
     }
-  </Form>
+  </PlatformForm>
 }
 
 const renderMultiItems = (props) => {
   const { item: { className, items } } = props
-  return <div className={`#TODO -mb-2 ${className}`}>
+  return <PlatformContainer className={`#TODO -mb-2 ${className}`}>
     {items.map(_item => renderItem({ ...props, item: _item, }))}
-  </div>
+  </PlatformContainer>
 }
 
 const renderItem = (props) => {

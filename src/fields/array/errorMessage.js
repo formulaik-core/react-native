@@ -1,5 +1,5 @@
 import React from 'react'
-import { Field, ErrorMessage as BaseErrorMesssage, getIn } from 'formik'
+import { Field, getIn } from 'formik'
 
 export default ({ name }) => (
   <Field

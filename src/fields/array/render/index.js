@@ -340,18 +340,19 @@ export default (props) => {
         })()
       }
     </PlatformContainer>
-    <style jsx>{`
+    {/* <style jsx>{`
 
       .renderer {
         padding: 0.5rem;
       }
       .error-message {
-        /* text-sm text-red-600 pt-2 */
+        
         padding-top: 0.5rem;
         font-size: 0.875rem;
         line-height: 1.25rem;
         color: #DC2626;
       }
-    `}</style>
+    `}
+    </style> */}
   </React.Fragment >
 }

@@ -32,8 +32,7 @@ export default (props) => {
     <PlatformContainer
       style={{
         marginBottom: "1rem",
-      }}
-    >
+      }} >
       <LabelRenderer {...props} />
       <Renderer type={_type} name={_id} >
         {({ field, form }) => {
@@ -56,7 +55,7 @@ export default (props) => {
 
           const disabled = props.isSubmitting || props.disabled || (props.item && props.item.disabled)
           const readOnly = props.readOnly || (props.props && props.props.readOnly)
-          return <div>
+          return <PlatformContainer>
             <Component
               {...props}
               disabled={disabled}
@@ -84,16 +83,16 @@ export default (props) => {
                   component="div"
                   className={"error-message"} />
               </PlatformContainer>}
-          </div>
+          </PlatformContainer>
         }}
       </Renderer>
     </PlatformContainer>
-    <style jsx>{`
+    {/* <style jsx>{`
       .error-message {
         margin-top: 1.5rem;
         text-align: center;
         color: #DC2626;
       }
-    `}</style>
+    `}</style> */}
   </React.Fragment>
 }
