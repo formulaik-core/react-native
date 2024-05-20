@@ -1,9 +1,10 @@
 import React from 'react'
-import { Field, ErrorMessage, FastField } from 'formik'
+import { Field, FastField, ErrorMessage } from 'formik'
 import componentResolver from '../componentResolver'
 import { nanoid } from 'nanoid'
 import LabelRenderer from '../chunks/label'
 import PlatformContainer from '../../platform/container/index.native.js'
+import PlatformText from '../../platform/text/index.native.js'
 
 export default (props) => {
   const { item: {
@@ -31,8 +32,8 @@ export default (props) => {
   return <React.Fragment>
     <PlatformContainer
       style={{
-        marginBottom: "1rem",
-      }} >
+        marginBottom: 10,
+      }}>
       <LabelRenderer {...props} />
       <Renderer type={_type} name={_id} >
         {({ field, form }) => {
@@ -73,15 +74,24 @@ export default (props) => {
                     paddingRight: "0.5rem",
                     marginTop: "0.5rem",
                     marginBottom: "1rem",
-                    borderBottomRightRadius: "0.5rem",
-                    borderBottomLeftRadius: "0.5rem"
+                    borderBottomRightRadius: 10,
+                    borderBottomLeftRadius: 10
                   }
                 }
               >
                 <ErrorMessage
                   name={_id}
-                  component="div"
-                  className={"error-message"} />
+                  render={a => <PlatformText
+                    style={
+                      {
+                        color: "red",
+                        fontSize: 12
+                      }
+                    }
+                  >{a}</PlatformText>}
+                // className={"error-message"} 
+
+                />
               </PlatformContainer>}
           </PlatformContainer>
         }}
