@@ -1,5 +1,5 @@
-import PlatformButton from '../../../../platform/button/index.native.js'
-import PlatformContainer from '../../../../platform/container/index.native.js'
+import PlatformButton from '../../../../platform/button/index.js'
+import PlatformContainer from '../../../../platform/container/index.js'
 import React from 'react'
 
 export default ({ onAdd, title, disabled }) => <PlatformContainer

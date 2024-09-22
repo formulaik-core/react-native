@@ -3,7 +3,7 @@ import { Field, FastField, ErrorMessage as BaseErrorMesssage, } from 'formik'
 import componentResolver from '../../componentResolver'
 import AddButton from './chunks/add'
 // import * as ReactDOM from 'react-dom'
-import PlatformContainer from '../../../platform/container/index.native.js'
+import PlatformContainer from '../../../platform/container/index.js'
 import React from 'react'
 
 export default (props) => {
@@ -346,7 +346,7 @@ export default (props) => {
         padding: 0.5rem;
       }
       .error-message {
-        
+
         padding-top: 0.5rem;
         font-size: 0.875rem;
         line-height: 1.25rem;

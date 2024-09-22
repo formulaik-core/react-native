@@ -3,8 +3,8 @@ import { Field, FastField, ErrorMessage } from 'formik'
 import componentResolver from '../componentResolver'
 import { nanoid } from 'nanoid'
 import LabelRenderer from '../chunks/label'
-import PlatformContainer from '../../platform/container/index.native.js'
-import PlatformText from '../../platform/text/index.native.js'
+import PlatformContainer from '../../platform/container/index.js'
+import PlatformText from '../../platform/text/index.js'
 
 export default (props) => {
   const { item: {
@@ -89,7 +89,7 @@ export default (props) => {
                       }
                     }
                   >{a}</PlatformText>}
-                // className={"error-message"} 
+                // className={"error-message"}
 
                 />
               </PlatformContainer>}

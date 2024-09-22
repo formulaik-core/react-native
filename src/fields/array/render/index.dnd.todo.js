@@ -6,7 +6,7 @@ import Add from './chunks/add'
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd"
 
 import React from 'react'
-import PlatformContainer from '../../../platform/container/index.native.js'
+import PlatformContainer from '../../../platform/container/index.js'
 
 export default (props) => {
   const {

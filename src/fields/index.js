@@ -2,8 +2,8 @@ import React from 'react'
 import ArrayField from './array'
 import SingleField from './single'
 // import * as ReactDOM from 'react-dom'
-import PlatformContainer from '../platform/container/index.native.js'
-import PlatformForm from '../platform/form/index.native.js'
+import PlatformContainer from '../platform/container/index.js'
+import PlatformForm from '../platform/form/index.js'
 
 export default (props) => {
   const { inputs } = props
