@@ -58,13 +58,13 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "formik": ">= 2.2.9",
     "react-native": ">= 0.5.0",
     "react": ">= 0.16.0"
   },
   "dependencies": {
     "schema-to-yup": "^1.12.18",
-    "nanoid": "^3.2.0"
+    "nanoid": "^3.2.0",
+    "formik": ">=2.4.6"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
