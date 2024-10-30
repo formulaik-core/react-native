@@ -3,6 +3,7 @@ import { Field, FastField, ErrorMessage } from 'formik'
 import componentResolver from '../componentResolver'
 import { nanoid } from 'nanoid'
 import LabelRenderer from '../chunks/label'
+import CaptionRenderer from '../chunks/caption'
 import PlatformContainer from '../../platform/container/index.js'
 import PlatformText from '../../platform/text/index.js'
 
@@ -96,6 +97,7 @@ export default (props) => {
           </PlatformContainer>
         }}
       </Renderer>
+      <CaptionRenderer {...props} />
     </PlatformContainer>
     {/* <style jsx>{`
       .error-message {
